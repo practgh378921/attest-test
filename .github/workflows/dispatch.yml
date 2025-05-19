@@ -33,16 +33,19 @@ jobs:
       - run: npm ci
       - run: npm run build
 
+      - name: Zip the dist directory
+        run: zip -r release.zip dist
+
       - name: Release
         uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
         with:
-          files: '${{ github.workspace }}/dist/**/*'
+          files: release.zip
 
       - name: Attest
         uses: actions/attest-build-provenance@v2
         with:
-          subject-path: '${{ github.workspace }}/dist'
+          subject-path: release.zip
 
 
 
