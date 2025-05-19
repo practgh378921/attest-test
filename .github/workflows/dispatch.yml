@@ -45,7 +45,10 @@ jobs:
       - name: Attest
         uses: actions/attest-build-provenance@v2
         with:
-          subject-path: release.zip
+#         subject-path: '${{ github.workspace }}/dist'          
+          subject-path: |
+            '${{ github.workspace }}/dist/**/*'
+            release.zip
 
 
 
