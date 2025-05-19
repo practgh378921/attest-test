@@ -31,6 +31,12 @@ jobs:
       - run: npm ci
       - run: npm run build
 
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files:
+            '${{ github.workspace }}/dist'
+
       - name: Attest
         uses: actions/attest-build-provenance@v2
         with:
