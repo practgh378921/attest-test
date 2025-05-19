@@ -1,0 +1,41 @@
+{
+  "name": "@gitcobra/anzip-es6",
+  "version": "0.1.0",
+  "description": "create an uncompressed zip file",
+  "type": "module",
+  "main": "dist/anzip-es6.js",
+  "browser": "dist/anzip-es6.min.js",
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts"
+  ],
+  "types": "./dist/anzip-es6.d.ts",
+  "directories": {},
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/node": "^22.14.1",
+    "rollup": "^4.40.0",
+    "tslib": "^2.8.1"
+  },
+  "scripts": {
+    "dev": "rollup -c --watch",
+    "build": "rollup -c",
+    "test": "node ./test/test_node.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gitcobra/anzip-es6.js.git"
+  },
+  "author": "gitcobra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitcobra/anzip-es6.js/issues"
+  },
+  "homepage": "https://github.com/gitcobra/anzip-es6.js#readme",
+  "keywords": [
+    "zip",
+    "uncompressed",
+    "browser"
+  ]
+}
