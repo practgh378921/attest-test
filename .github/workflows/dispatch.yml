@@ -47,7 +47,7 @@ jobs:
         with:
 #         subject-path: '${{ github.workspace }}/dist'          
           subject-path: |
-            '${{ github.workspace }}/dist/**/*'
+            dist/**/*
             release.zip
 
 
